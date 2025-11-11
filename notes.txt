@@ -1,7 +1,7 @@
 npm install express
 npm install -g serve
 serve public
--------------
+--------------
 git add .
 git commit -m "update nginx"
 git push heroku main
