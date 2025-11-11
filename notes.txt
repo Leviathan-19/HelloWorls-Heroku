@@ -3,5 +3,5 @@ npm install -g serve
 serve public
 
 git add .
-git commit -m "xd"
+git commit -m "update notes"
 git push heroku main
