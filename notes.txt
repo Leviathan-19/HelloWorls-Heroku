@@ -1,3 +1,6 @@
 npm install express
 npm install -g serve
 serve public
+
+
+git push heroku main
