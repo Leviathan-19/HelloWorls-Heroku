@@ -9,5 +9,5 @@ dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
 dotnet add package Microsoft.AspNetCore.OpenApi
 
 git add .
-git commit -m "comment"
+git commit -m "comment xd"
 git push heroku main
