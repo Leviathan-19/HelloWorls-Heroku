@@ -1,0 +1,10 @@
+{
+  "runtime": {
+    "name": ".NET",
+    "version": "8.0",
+    "supports": {
+      "projectFile": true,
+      "msbuild": true
+    }
+  }
+}
