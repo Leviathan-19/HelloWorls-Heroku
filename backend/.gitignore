@@ -1,0 +1,4 @@
+backend.http
+bin/
+obj/
+Properties/launchSettings.json
