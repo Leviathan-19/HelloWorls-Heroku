@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Link Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; }
+        .form-group { margin-bottom: 20px; }
+        input[type="text"] { width: 70%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .links-list { margin-top: 30px; }
+        .link-item { padding: 15px; border-bottom: 1px solid #eee; }
+        .link-item:last-child { border-bottom: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 Link Manager</h1>
+        
+        <div class="form-group">
+            <input type="text" id="linkInput" placeholder="https://ejemplo.com">
+            <button onclick="addLink()">➕ Agregar Link</button>
+        </div>
+
+        <div class="links-list">
+            <h2>📋 Links Guardados</h2>
+            <div id="linksContainer">
+                <p>Cargando links...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;  // ← Agregar este using
 using Api.Data;
 using Api.Models;
 
@@ -25,6 +26,24 @@ namespace Api.Controllers
             await _context.SaveChangesAsync();
 
             return Ok(new { message = "Link agregado correctamente", id = link.Id });
+        }
+
+        // GET: api/links
+        [HttpGet]
+        public async Task<IActionResult> GetAllLinks()
+        {
+            try
+            {
+                var links = await _context.Links
+                    .OrderByDescending(l => l.Created_At)
+                    .ToListAsync();
+                
+                return Ok(links);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error al obtener los links", error = ex.Message });
+            }
         }
     }
 }

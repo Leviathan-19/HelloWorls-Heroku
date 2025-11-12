@@ -12,6 +12,7 @@ namespace Api.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Link>().ToTable("Links", "public");
+            modelBuilder.Entity<Link>().Property(l => l.Id).HasColumnName("id");
             modelBuilder.Entity<Link>().Property(l => l.Links).HasColumnName("links");
             modelBuilder.Entity<Link>().Property(l => l.Created_At).HasColumnName("created_at");
         }
